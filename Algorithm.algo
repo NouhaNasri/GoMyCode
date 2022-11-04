@@ -1,0 +1,25 @@
+ALGORITHM readSentence
+VAR 
+    a:CHAR
+    lgth:INTEGER:=0
+    nb-w:INTEGER:=0
+    voy:INTEGER:=0
+BEGIN
+  WHILE (a<>".") DO
+
+    lgth:= lgth + 1
+
+    IF (a=" ") THEN
+    nb-w:= nb-w + 1
+    END IF
+
+    IF (a="a" OR  a="e" OR  a="i" OR  a="o" OR  a="u" OR  a="y" OR  a="A" OR a="E" OR a="I" OR  a="O" OR a="U" OR a="Y") THEN
+    voy:= voy + 1
+    END IF
+  END_WHILE
+
+  WRITE ("Length of the sentence is " , lgth)
+  WRITE ("Number of words is " , nb-w)
+  WRITE ("Number of vowels is " , voy)
+
+END
