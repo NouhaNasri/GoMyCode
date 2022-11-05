@@ -1,0 +1,38 @@
+PROCEDURE dot_product (var sum:INTEGER, v1,v2: : ARRAY_OF INTEGER[259];)
+
+VAR
+    i: INTEGER;
+ 
+BEGIN
+sum:=0
+IF (v1.length<>v2.length) THEN
+  write ('the 2 array need to have the same length')
+ELSE
+    FOR i FROM 0 TO v1.length STEP 1  DO
+       sum=sum+(v1[i]v2[i])
+    END_FOr
+
+   END_IF
+
+END
+
+
+
+
+ALGORITHM dot-product 
+VAR
+    v1,v2 : ARRAY_OF INTEGER[259];
+    sum:INTEGER;
+BEGIN
+//read size v1
+//read element v1
+//read size v2
+//read element v2
+ dot_product (sum,v1,v2)
+IF (sum=0) THEN
+    write ('the 2 vectors are ortogonal')
+ELSE
+    write ('the 2 vectors are not ortogonal')
+END_IF
+
+END
