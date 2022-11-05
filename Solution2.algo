@@ -1,0 +1,29 @@
+ALGORITHM Calcul 
+VAR
+    htab:HASH_TABLE<INTEGER,INTEGER>;
+    tab1,tab2,keys: ARRAY_OF INTEGER[150];
+    i,count,somme:INTEGER
+BEGIN
+     FOR i FROM 0 TO tab1.length -1 STEP 1  DO
+     IF (htab.lookup(tab1[i]) = TRUE) THEN
+           count := htab.get(tab1[i]);
+           htab.insert(tab1[i],count+1);
+       ELSE
+           htab.insert(tab1[i],1);
+       END_IF
+   END_FOR
+    FOR i FROM 0 TO tab2.length -1 STEP 1  DO
+        IF (htab.lookup(tab2[i]) = TRUE) THEN
+           count := htab.get(tab2[i]);
+           htab.insert(tab2[i],count+1);
+       ELSE
+           htab.insert(tab2[i],1);
+       END_IF
+   END_FOR
+   keys:= htab.getkeys()
+   FOR i FROM 0 TO keys.length-1 STEP 1  DO
+    IF (htab.get(keys[i])=1) THEN
+        somme:=somme + keys[i]
+    END_IF
+   END_FOR
+END
