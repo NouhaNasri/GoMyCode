@@ -1,0 +1,18 @@
+ALGORITHM triIsertion
+   VAR
+    tab : ARRAY_OF INTEGER[150];
+    i,j,m:INTEGER
+   BEGIN
+
+    FOR i FROM 1 TO tab.length STEP 1  DO
+        m:=tab[i]
+    j:=i-1
+        WHILE (j>=0 tab[j]>m) DO
+
+            tab[j+1]=tab[j]
+            j:=j-1
+        END_WHILE
+    tab[j+1]=m
+    END_FOR
+
+   END
